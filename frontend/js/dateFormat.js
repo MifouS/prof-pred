@@ -1,4 +1,4 @@
-function dateFormat(iso) {
-    if (iso == null) return 'N/A'
-    return new Date(iso).toLocaleString('sr-RS')
+function dateFormat(real) {
+    if (real == null) return 'N/A'
+    return new Date(real).toLocaleString('sr-RS')
 }

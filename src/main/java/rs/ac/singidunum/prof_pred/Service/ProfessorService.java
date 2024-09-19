@@ -26,13 +26,15 @@ public class ProfessorService {
 
     public Professor saveProfessor(ProfessorModel model) {
         Professor professor = new Professor();
-        professor.setName(model.getName());
+        professor.setPname(model.getPname());
+        professor.setSurname(model.getSurname());
         return repository.save(professor);
     }
 
     public Professor updateProfessor(Integer id, ProfessorModel model) {
         Professor professor = repository.findByIdAndDeletedAtIsNull(id).orElseThrow();
-        professor.setName(model.getName());
+        professor.setPname(model.getPname());
+        professor.setSurname(model.getSurname());
         professor.setUpdatedAt(LocalDateTime.now());
         return repository.save(professor);
     }

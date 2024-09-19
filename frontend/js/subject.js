@@ -8,7 +8,7 @@ fetch('http://localhost:8080/api/subject')
             const copy = template.content.cloneNode(true)
             copy.querySelector('.id').innerText = subject.id
             copy.querySelector('.subject_name').innerText = subject.subject_name
-            copy.querySelector('.professor').innerText = subject.professor.name + " " + subject.professor.surname
+            copy.querySelector('.professor').innerText = subject.professor.pname + " " + subject.professor.surname
             copy.querySelector('.updated').innerText = dateFormat(subject.updated_at)
             copy.querySelector('.edit').href = `./editSubject.html?id=${subject.id}`
             copy.querySelector('.remove').addEventListener('click', ()=> {

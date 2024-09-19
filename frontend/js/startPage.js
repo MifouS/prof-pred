@@ -8,12 +8,12 @@ fetch('http://localhost:8080/api/professor')
         data.forEach(professor => {
             const copy = template.content.cloneNode(true)
             copy.querySelector('.id').innerText = professor.id
-            copy.querySelector('.name').innerText = professor.name
+            copy.querySelector('.pname').innerText = professor.pname
             copy.querySelector('.surname').innerText = professor.surname
             copy.querySelector('.updated').innerText = dateFormat(professor.updated_at)
             copy.querySelector('.edit').href = `./editProfessor.html?id=${professor.id}`
             copy.querySelector('.remove').addEventListener('click', ()=> {
-                if (confirm(`Zelite obrisati profesora ${professor.name}?`)) {
+                if (confirm(`Zelite obrisati profesora ${professor.pname}?`)) {
                     fetch(`http://localhost:8080/api/professor/${professor.id}`, {
                         method: 'DELETE',
                     })

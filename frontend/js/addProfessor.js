@@ -1,8 +1,8 @@
-const name = document.getElementById('name')
+const pname = document.getElementById('pname')
 const surname = document.getElementById('surname')
 
 document.getElementById('save').addEventListener('click', () => {
-    if (name.value == '' || name.value == null) {
+    if (pname.value == '' || pname.value == null) {
         alert('Ime ne sme da bude prazno.')
         return
     }
@@ -18,7 +18,7 @@ document.getElementById('save').addEventListener('click', () => {
             'Content-type': 'application/json'
         },
         body: JSON.stringify({
-            name: name.value,
+            pname: pname.value,
             surname: surname.value,
         })
     }).then(rsp=> {

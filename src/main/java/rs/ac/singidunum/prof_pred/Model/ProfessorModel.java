@@ -8,6 +8,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class ProfessorModel {
-    private String name;
+    private String pname;
     private String surname;
 }

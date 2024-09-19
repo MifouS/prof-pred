@@ -20,7 +20,7 @@ public class Professor {
     private Integer id;
 
     @Column(nullable = false)
-    private String name;
+    private String pname;
 
     @Column(nullable = false)
     private String surname;

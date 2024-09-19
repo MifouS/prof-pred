@@ -6,7 +6,7 @@ fetch('http://localhost:8080/api/professor')
         data.forEach(professor => {
             const option = document.createElement('option')
             option.value = professor.id
-            option.text = professor.name + " " + professor.surname
+            option.text = professor.pname + " " + professor.surname
             prf.appendChild(option)
         })
         document.getElementById('save').addEventListener('click', () => {
